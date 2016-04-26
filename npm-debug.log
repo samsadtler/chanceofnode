@@ -1,0 +1,25 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'remove', 'mongoose' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose node_modules/mongoose unbuild
+5 info preuninstall mongoose@4.4.13
+6 info uninstall mongoose@4.4.13
+7 verbose true,/Users/Sam/Google Drive/ITP/Thesis/code/chanceofnode/node_modules,/Users/Sam/Google Drive/ITP/Thesis/code/chanceofnode/node_modules unbuild mongoose@4.4.13
+8 info postuninstall mongoose@4.4.13
+9 error Error: EACCES, unlink '/Users/Sam/Google Drive/ITP/Thesis/code/chanceofnode/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/node_modules/require_optional/node_modules/.bin/semver'
+9 error  { [Error: EACCES, unlink '/Users/Sam/Google Drive/ITP/Thesis/code/chanceofnode/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/node_modules/require_optional/node_modules/.bin/semver']
+9 error   errno: 3,
+9 error   code: 'EACCES',
+9 error   path: '/Users/Sam/Google Drive/ITP/Thesis/code/chanceofnode/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/node_modules/require_optional/node_modules/.bin/semver' }
+10 error Please try running this command again as root/Administrator.
+11 error System Darwin 15.4.0
+12 error command "node" "/usr/local/bin/npm" "remove" "mongoose"
+13 error cwd /Users/Sam/Google Drive/ITP/Thesis/code/chanceofnode
+14 error node -v v0.10.33
+15 error npm -v 1.4.28
+16 error path /Users/Sam/Google Drive/ITP/Thesis/code/chanceofnode/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/node_modules/require_optional/node_modules/.bin/semver
+17 error code EACCES
+18 error errno 3
+19 error stack Error: EACCES, unlink '/Users/Sam/Google Drive/ITP/Thesis/code/chanceofnode/node_modules/mongoose/node_modules/mongodb/node_modules/mongodb-core/node_modules/require_optional/node_modules/.bin/semver'
+20 verbose exit [ 3, true ]
