@@ -3,7 +3,7 @@ var SunCalc = require('suncalc');
 // var SunCalc = require('./suncalc'),
 var t = require('tap');
 var router = express.Router();
-router.post('/post', function(req, res) {
+router.post('/post/', function(req, res) {
   
   var jsonData = {
     'name': 'posted: chance of rainbows ',
@@ -21,7 +21,7 @@ router.get('/', function(req, res) {
 
   // respond with json data
   res.json(jsonData)
-});
+})
 
 // simple route to show an HTML page
 router.get('/sample-page', function(req,res){
@@ -30,7 +30,7 @@ router.get('/sample-page', function(req,res){
 
 router.get('/api/get/', function(req, res){
 
-  console.log('get requestion data' req.data)
+  console.log('get requestion data')
   var degree;
   var rads;
   var date = new Date('2013-03-05UTC'),
