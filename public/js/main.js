@@ -16,7 +16,7 @@ function suncalcRequest(lat, lng, yearmonthday){
 		'date': yearmonthday
 	}
 	jQuery.ajax({
-			url : localhost + '/api/get',
+			url : localhost + '/post/',
 			type : 'POST',
 			data : dataArray,
 			dataType : 'json',
