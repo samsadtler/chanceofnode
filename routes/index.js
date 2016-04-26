@@ -30,7 +30,7 @@ router.get('/sample-page', function(req,res){
 
 router.get('/api/get/', function(req, res){
 
-  console.log('get requestion data' , req)
+  console.log('get requestion data' , req.query)
   var degree;
   var rads;
   var date = new Date('2013-03-05UTC'),
