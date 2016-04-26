@@ -37,9 +37,9 @@ router.get('/api/get/', function(req, res){
     lat = req.query.lat,
     lng = req.query.lng;
     console.log("datalatlng: ", date, ', ', lat, ', ', lng)
-function near(val1, val2, margin) {
-    return Math.abs(val1 - val2) < (margin || 1E-15);
-}
+  function near(val1, val2, margin) {
+      return Math.abs(val1 - val2) < (margin || 1E-15);
+  }
 
 // var testTimes = {
 //     solarNoon: '2013-03-05T10:10:57Z',
@@ -57,7 +57,7 @@ function near(val1, val2, margin) {
 //     goldenHourEnd: '2013-03-05T05:19:01Z',
 //     goldenHour: '2013-03-05T15:02:52Z'
 // };
-var sunPos = SunCalc.getPosition(date, lat, lng);
+  var sunPos = SunCalc.getPosition('2013-03-05UTC', lat, lng);
 
     // t.ok(near(sunPos.azimuth, -2.5003175907168385), 'azimuth');
     // t.ok(near(sunPos.altitude, -0.7000406838781611), 'altitude in radians');
