@@ -3,7 +3,15 @@ var SunCalc = require('suncalc');
 // var SunCalc = require('./suncalc'),
 var t = require('tap');
 var router = express.Router();
-
+router.post('/post/', function(req, res) {
+  
+  var jsonData = {
+    'name': 'posted: chance of rainbows ',
+    'api-status':'OK'
+  }
+  // respond with json data
+  res.json(jsonData)
+});
 router.get('/', function(req, res) {
   
   var jsonData = {
