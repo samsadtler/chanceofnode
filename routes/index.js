@@ -33,8 +33,8 @@ router.get('/api/get/', function(req, res){
   console.log('get requestion data' , req.query)
   var degree;
   var rads;
-  // var date = req.query.date,
-  var date = new Date('2013-03-05UTC'),
+  var adate = req.query.date
+  var date = new Date(adate),
     lat = req.query.lat,
     lng = req.query.lng;
     console.log("datalatlng: ", date, ', ', lat, ', ', lng)
