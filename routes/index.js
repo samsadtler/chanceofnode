@@ -36,7 +36,7 @@ router.get('/api/get/', function(req, res){
   var date = req.query.date,
     lat = req.query.lat,
     lng = req.query.lng;
-
+    console.log("datalatlng: ", date, ', ', lat, ', ', lng)
 function near(val1, val2, margin) {
     return Math.abs(val1 - val2) < (margin || 1E-15);
 }
