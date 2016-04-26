@@ -1,5 +1,5 @@
 var localhost = "https://chanceofrainbows.herokuapp.com";
-
+// var localhost = "https://localhost:3000";
 
 function init(){
 	console.log("init babies")
@@ -16,12 +16,15 @@ function suncalcRequest(lat, lng, yearmonthday){
 		'date': yearmonthday
 	}
 	jQuery.ajax({
-			url : localhost + '/api/get',
+			url : localhost + '/api/get/',
 			type : 'get',
 			data : dataArray,
 			dataType : 'json',
 			success : function(response) {
 				console.log("calculation response", response);
+			},
+			error: function(response){
+				console.log('fuck beans')
 			}
 			
 
