@@ -33,9 +33,9 @@ router.get('/api/get/', function(req, res){
   console.log('get requestion data' , req.query)
   var degree;
   var rads;
-  var date = new Date('2013-03-05UTC'),
-    lat = 50.5,
-    lng = 30.5;
+  var date = req.query.date,
+    lat = req.query.lat,
+    lng = req.query.lng;
 
 function near(val1, val2, margin) {
     return Math.abs(val1 - val2) < (margin || 1E-15);
