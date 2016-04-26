@@ -3,7 +3,8 @@ var localhost = "https://chanceofrainbows.herokuapp.com";
 
 function init(){
 	console.log("init babies")
-	var date = new Date('2013-03-05UTC'),
+	// var date = new Date('2013-03-05UTC'),
+	var date = '2013-03-05UTC',
     lat = 50.5,
     lng = 30.5;
 	suncalcRequest(lat, lng, date)
