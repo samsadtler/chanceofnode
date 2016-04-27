@@ -36,8 +36,8 @@ router.get('/api/get/', function(req, res){
     var aDate = req.query.date;
     var date = new Date(req.query.date);
     // var date = new Date.now();
-    var lat = decimalAdjust('round', req.query.lat, -2);
-    var lng = decimalAdjust('round', req.query.lng, -2);
+    var lat = decimalAdjust('round', req.query.lat, -1);
+    var lng = decimalAdjust('round', req.query.lng, -1);
     console.log("aDate date lat lng: ", aDate, ', ', date, ', ', lat, ', ', lng)
 
     var sunPos = SunCalc.getPosition(aDate, lat, lng);
