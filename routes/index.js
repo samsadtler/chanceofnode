@@ -34,13 +34,13 @@ router.get('/api/get/', function(req, res){
     var degree;
     var rads;
     var aDate = req.query.date;
-    var date = new Date(req.query.date);
+    var date = new Date(aDate);
     // var date = new Date.now();
-    var lat = decimalAdjust('round', req.query.lat, -1);
-    var lng = decimalAdjust('round', req.query.lng, -1);
+    var lat = decimalAdjust('round', req.query.lat, -2);
+    var lng = decimalAdjust('round', req.query.lng, -2);
     console.log("aDate date lat lng: ", aDate, ', ', date, ', ', lat, ', ', lng)
 
-    var sunPos = SunCalc.getPosition(aDate, lat, lng);
+    var sunPos = SunCalc.getPosition(date, lat, lng);
     var rads =  sunPos.altitude;
     var degree =  rads*180/Math.PI;
     console.log("radians: ",rads)
