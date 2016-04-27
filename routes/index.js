@@ -49,7 +49,8 @@ router.get('/api/get/', function(req, res){
         'name': 'chance of rainbows',
         'api-status':'getitdone',
         'radians': rads,
-        'degrees': degree
+        'degrees': degree,
+        'date': date
     }
     res.json(jsonData);
     
