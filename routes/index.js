@@ -34,14 +34,12 @@ router.get('/api/get/', function(req, res){
     var degree;
     var rads;
     var aDate = req.query.date;
-    // var date = new Date(req.query.date);
-    var date = new Date.now();
+    var date = new Date(req.query.date);
+    // var date = new Date.now();
     var lat = decimalAdjust('round', req.query.lat, -2);
     var lng = decimalAdjust('round', req.query.lng, -2);
-      console.log("aDate date lat lng: ", aDate, ', ', date, ', ', lat, ', ', lng)
-    function near(val1, val2, margin) {
-        return Math.abs(val1 - val2) < (margin || 1E-15);
-    }
+    console.log("aDate date lat lng: ", aDate, ', ', date, ', ', lat, ', ', lng)
+
     var sunPos = SunCalc.getPosition(date, lat, lng);
     var rads =  sunPos.altitude;
     var degree =  rads*180/Math.PI;
@@ -57,6 +55,9 @@ router.get('/api/get/', function(req, res){
     
 })
 
+ function near(val1, val2, margin) {
+      return Math.abs(val1 - val2) < (margin || 1E-15);
+  }
  function decimalAdjust(type, value, exp) {
     // If the exp is undefined or zero...
     if (typeof exp === 'undefined' || +exp === 0) {
