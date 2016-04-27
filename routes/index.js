@@ -33,10 +33,10 @@ router.get('/api/get/', function(req, res){
     console.log('get requestion data' , req.query)
     var degree;
     var rads;
-    var aDate = req.query.date
-    var date = new Date(aDate),
-      lat = decimalAdjust('round', req.query.lat, -2),
-      lng = decimalAdjust('round', req.query.lng, -2);
+    var aDate = req.query.date;
+    var date = new Date(req.query.date);
+    var lat = decimalAdjust('round', req.query.lat, -2);
+    var lng = decimalAdjust('round', req.query.lng, -2);
       console.log("aDate date lat lng: ", aDate, ', ', date, ', ', lat, ', ', lng)
     function near(val1, val2, margin) {
         return Math.abs(val1 - val2) < (margin || 1E-15);
