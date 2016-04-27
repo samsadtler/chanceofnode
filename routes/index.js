@@ -40,7 +40,7 @@ router.get('/api/get/', function(req, res){
     var lng = decimalAdjust('round', req.query.lng, -2);
     console.log("aDate date lat lng: ", aDate, ', ', date, ', ', lat, ', ', lng)
 
-    var sunPos = SunCalc.getPosition(date, lat, lng);
+    var sunPos = SunCalc.getPosition(aDate, lat, lng);
     var rads =  sunPos.altitude;
     var degree =  rads*180/Math.PI;
     console.log("radians: ",rads)
