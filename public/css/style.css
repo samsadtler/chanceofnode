@@ -1,3 +1,111 @@
-/**************/
-/* Custom CSS */
-/**************/
+body {
+  background: lightblue;
+}
+
+.pos {
+  position: absolute;
+  width: 100%;
+  bottom: 50%;
+  left: 0%;
+}
+
+.offset {
+  float: left;
+}
+
+.red-circle {
+  width: 50%;
+  position: relative;
+  left: 0%;
+}
+
+.red-circle:after {
+  background: red;
+}
+
+.orange-circle {
+  width: 45%;
+  position: relative;
+  left: 5%;
+}
+
+.orange-circle:after {
+  background: orange;
+}
+
+.yellow-circle {
+  width: 40%;
+  position: relative;
+  left: 10%;
+}
+
+.yellow-circle:after {
+  background: yellow;
+}
+
+.green-circle {
+  width: 35%;
+  position: relative;
+  left: 15%;
+}
+
+.green-circle:after {
+  background: green;
+}
+
+.blue-circle {
+  width: 30%;
+  position: relative;
+  left: 20%;
+}
+
+.blue-circle:after {
+  background: blue;
+}
+.lightblue-circle {
+  width: 25%;
+  position: relative;
+  left: 25%;
+}
+
+.lightblue-circle:after {
+  background: lightblue;
+}
+.left-circle:after {
+  content: "";
+  display: block;
+  height: 50%;
+  width: 100%;
+  padding-bottom: 100%;
+  -moz-border-radius: 100% 0 0 0;
+  -webkit-border-radius: 100% 0 0 0;
+  border-radius: 100% 0 0 0;
+}
+
+.left-circle div {
+  float: left;
+  width: 100%;
+  padding-top: 50%;
+}
+
+.right-circle:after {
+  content: "";
+  display: block;
+  float: left;
+  height: 50%;
+  width: 100%;
+  padding-bottom: 100%;
+  -moz-border-radius: 0 100% 0 0;
+  -webkit-border-radius: 0 100% 0 0;
+  border-radius: 0 100% 0 0;
+}
+
+.right-circle div {
+  float: left;
+  width: 100%;
+  padding-top: 50%;
+  line-height: 1em;
+  margin-top: -0.5em;
+  text-align: center;
+  color: white;
+}

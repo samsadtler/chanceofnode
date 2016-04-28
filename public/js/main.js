@@ -24,7 +24,7 @@ function suncalcRequest(lat, lng, yearmonthday){
 			success : function(response) {
 				console.log("calculation response", response);
 				//if its broke this might have done it
-				var result = getElementByClassName('party')[0].innerHTML = response;
+				// var result = getElementByClassName('party')[0].innerHTML = response;
 
 			},
 			error: function(response){
