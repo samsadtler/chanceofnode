@@ -29,13 +29,12 @@ router.get('/sample-page', function(req,res){
 })
 
 router.get('/api/get/', function(req, res){
-
     console.log('get requestion data' , req.query)
     var degree;
     var rads;
     var aDate = req.query.date;
-    var date = new Date(aDate);
-    // var date = new Date.now();
+    // var date = new Date(aDate);
+    var date = new Date();
     var lat = decimalAdjust('round', req.query.lat, -2);
     var lng = decimalAdjust('round', req.query.lng, -2);
     console.log("aDate date lat lng: ", aDate, ', ', date, ', ', lat, ', ', lng)

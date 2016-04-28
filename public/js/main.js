@@ -23,6 +23,9 @@ function suncalcRequest(lat, lng, yearmonthday){
 			dataType : 'json',
 			success : function(response) {
 				console.log("calculation response", response);
+				//if its broke this might have done it
+				var result = getElementByClassName('party')[0].innerHTML = response;
+
 			},
 			error: function(response){
 				console.log('fuck beans')
